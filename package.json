@@ -1,0 +1,41 @@
+{
+  "name": "project-communication-commitment-audit-agent",
+  "version": "0.0.0-dev01",
+  "private": true,
+  "description": "Local-first foundation for 项目沟通与承诺审计智能体.",
+  "engines": {
+    "node": ">=22 <25"
+  },
+  "packageManager": "npm@10.9.8",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run test:foundation && npm run test:dev02",
+    "test:foundation": "node --test tests/unit/foundation.test.mjs",
+    "test:dev02": "node scripts/run-dev02-tests.mjs",
+    "gate": "npm run lint && npm run typecheck && npm test && npm run build"
+  },
+  "dependencies": {
+    "@langchain/core": "1.2.9",
+    "@langchain/langgraph": "1.4.13",
+    "better-sqlite3": "12.11.1",
+    "drizzle-orm": "0.45.2",
+    "next": "16.2.11",
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "9.6.0",
+    "@types/node": "22.20.4",
+    "@types/react": "19.2.6",
+    "@types/react-dom": "19.2.3",
+    "drizzle-kit": "0.31.10",
+    "eslint": "9.35.0",
+    "eslint-config-next": "16.2.11",
+    "typescript": "5.9.3"
+  }
+}
