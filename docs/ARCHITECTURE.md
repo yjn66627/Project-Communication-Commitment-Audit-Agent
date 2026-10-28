@@ -1,5 +1,7 @@
 # 架构与数据边界
 
+本图描述 R19 源码展示的分层。后续姓名增强、只读质量复核和最终报告 UX、正式版 DPAPI 辅助实现未全部纳入本仓库；对应关系见 [`IMPLEMENTATION_STATUS.md`](../IMPLEMENTATION_STATUS.md)。
+
 ## 五阶段流程
 
 ```mermaid
